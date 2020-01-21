@@ -18,7 +18,7 @@ This repository is intended to be a *single package* within a catkin repository.
 
     
 1. `cd` to the `src` folder of your catkin workspace
-1. copy the contents of this repositrory into a folder titled `cs169-julienb-pa1` (this will be the package name)
+1. copy the contents of this repositrory into a folder titled `cs169_julienb_pa1` (this will be the package name)
 1. Run `catkin_make` at the root of your workspace.
 
 
