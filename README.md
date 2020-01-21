@@ -24,5 +24,9 @@ This repository is intended to be a *single package* within a catkin repository.
 ## Running
 1. `roslaunch cs169_julienb_pa1 moveforward.launch` to execute task #1
 1. `roslaunch cs169_julienb_pa1 datacollection.launch` to execute task #2
-1. `roslaunch cs169_julienb_pa1 odomplotter.launch` to execute task #3 (note: run rviz on your local computer and add visualization markers to see the odom plot output)
+    * This will start the system
+    * Run `roslaunch cs169_julienb_pa1 rosbag_record.launch` to start bagging the data. Ctl-C to stop. You probably will need to reindex the bag file after quitting, as it seems not to exit gracefully.
+1. `roslaunch cs169_julienb_pa1 subscriber_demo.launch` to execute task #3 
+    * Run rviz on your local computer and add `/plot_xy` as a topic. Make sure the fixed frame is set odom. 
+    * You can control the robot using keyboard in the terminal that you executed roslaunch.
 
