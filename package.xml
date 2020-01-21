@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>pa1</name>
+  <name>cs169_julienb_pa1</name>
   <version>0.0.0</version>
-  <description>The pa1 package</description>
+  <description>The cs169_julienb_pa1 package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
