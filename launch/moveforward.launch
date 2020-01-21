@@ -9,5 +9,5 @@
         <arg name="depth_registered_processing" value="true"/>
     </include>
 
-    <node pkg="cs169_julienb_pa1" type="movefoward.py" name="moveforward" />
+    <node pkg="cs169_julienb_pa1" type="moveforward.py" name="moveforward" />
 </launch>
