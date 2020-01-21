@@ -17,8 +17,8 @@ def main():
     rate = rospy.Rate(rate_hz)
 
     rospy.loginfo("Rosbot will move forward {:f} meters".format(distance))
-    rospy.loginfo("Sleeping for 2 seconds to allow for serial bridge to get operational")
-    rospy.sleep(rospy.Duration(secs=2))
+    rospy.loginfo("Sleeping for 5 seconds to allow for serial bridge to get operational")
+    rospy.sleep(rospy.Duration(secs=5))
 
     while distance_remaining > 0:
     
