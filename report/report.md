@@ -16,4 +16,4 @@ Julien Blanchet - CS169 - 1/21/2020
     * What partial successes do I have that deserve extra credit?
 
 ## Allocation of Effort
-As this was an individual programming assignment, all work was done by myself.
+As this was an individual programming assignment, all work was done by myself. I did discuss with Mingo how to incorporate rosbag into a launch file.

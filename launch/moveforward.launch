@@ -1,14 +1,5 @@
 <launch>
     <node pkg="husarion_ros" type="serial_bridge.sh" name="odometry_serial_bridge"/>
-    <node pkg="rplidar_ros" type="rplidarNode" name="rplidar">
-        <param name="angle_compensate" type="bool" value="true"/>
-        <param name="serial_baudrate" type="int" value="115200"/><!--model A2 (ROSbot 2.0) -->
-    </node>
-     <include file="$(find astra_launch)/launch/astra.launch">
-        <arg name="depth_processing" value="true"/>
-        <arg name="depth_registered_processing" value="true"/>
-    </include>
-
     <node pkg="cs169_julienb_pa1" type="moveforward.py" name="moveforward"  output="screen">
         <param name="distance_m" type="double" value="1.0" />
     </node>
