@@ -10,6 +10,6 @@
     </include>
 
     <node pkg="cs169_julienb_pa1" type="moveforward.py" name="moveforward"  output="screen">
-        <param name="distance_m" type="float" value="1.0" />
+        <param name="distance_m" type="double" value="1.0" />
     </node>
 </launch>
