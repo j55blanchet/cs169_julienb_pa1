@@ -1,12 +1,10 @@
 
-
 import rospy
 
 from geometry_msgs.msg import Twist
 
 MAX_SPEED = 0.2
 rate_hz = 1
-
 
 def main():
     rospy.init_node("moveforward")
