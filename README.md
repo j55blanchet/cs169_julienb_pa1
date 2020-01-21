@@ -21,4 +21,8 @@ This repository is intended to be a *single package* within a catkin repository.
 1. copy the contents of this repositrory into a folder titled `cs169_julienb_pa1` (this will be the package name)
 1. Run `catkin_make` at the root of your workspace.
 
+## Running
+1. `roslaunch cs169_julienb_pa1 moveforward.launch` to execute task #1
+1. `roslaunch cs169_julienb_pa1 datacollection.launch` to execute task #2
+1. `roslaunch cs169_julienb_pa1 odomplotter.launch` to execute task #3 (note: run rviz on your local computer and add visualization markers to see the odom plot output)
 
