@@ -10,13 +10,16 @@ def main():
     rospy.init_node("moveforward")
     pub = rospy.Publisher("/cmd_vel", Twist, queue_size=1)
 
+
     # Distance is specified as a parameter (in meters)
     distance = rospy.get_param("distance_m", default=1.0)
     distance_remaining = distance
     rate = rospy.Rate(rate_hz)
 
     rospy.loginfo("Rosbot will move forward {:f} meters".format(distance))
-        
+    rospy.loginfo("Sleeping for 2 seconds to allow for serial bridge to get operational")
+    rospy.sleep(rospy.Time(secs=2))
+
     while distance_remaining > 0:
     
         t = Twist()
