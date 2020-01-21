@@ -18,7 +18,7 @@ def main():
 
     rospy.loginfo("Rosbot will move forward {:f} meters".format(distance))
     rospy.loginfo("Sleeping for 2 seconds to allow for serial bridge to get operational")
-    rospy.sleep(rospy.Time(secs=2))
+    rospy.sleep(rospy.Duration(secs=2))
 
     while distance_remaining > 0:
     
