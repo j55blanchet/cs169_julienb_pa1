@@ -15,14 +15,14 @@ def main():
     distance_remaining = distance
     rate = rospy.Rate(rate_hz)
 
-    rospy.loginfo("Rosbot will move forward {0} meters" % distance)
+    rospy.loginfo("Rosbot will move forward {:d} meters".format(distance))
         
     while distance_remaining > 0:
     
         t = Twist()
         t.linear.x = min(distance_remaining, MAX_SPEED)
     
-        rospy.loginfo("{0}m remaining. Moving forward at {1} m/s" % (distance_remaining, t.linear.x))
+        rospy.loginfo("{0:d}m remaining. Moving forward at {1:d} m/s".format(distance_remaining, t.linear.x))
         distance_remaining -= t.linear.x
     
         pub.publish(t)
