@@ -11,18 +11,18 @@ def main():
     pub = rospy.Publisher("/cmd_vel", Twist, queue_size=1)
 
     # Distance is specified as a parameter (in meters)
-    distance = rospy.get_param("distance_m", default=1)
+    distance = rospy.get_param("distance_m", default=1.0)
     distance_remaining = distance
     rate = rospy.Rate(rate_hz)
 
-    rospy.loginfo("Rosbot will move forward {:d} meters".format(distance))
+    rospy.loginfo("Rosbot will move forward {:f} meters".format(distance))
         
     while distance_remaining > 0:
     
         t = Twist()
         t.linear.x = min(distance_remaining, MAX_SPEED)
     
-        rospy.loginfo("{0:d}m remaining. Moving forward at {1:d} m/s".format(distance_remaining, t.linear.x))
+        rospy.loginfo("{0:f}m remaining. Moving forward at {1:f} m/s".format(distance_remaining, t.linear.x))
         distance_remaining -= t.linear.x
     
         pub.publish(t)
