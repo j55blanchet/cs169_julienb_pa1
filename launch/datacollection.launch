@@ -1,10 +1,5 @@
 <launch>
 
-    <arg name="bag_topics" default="
-    /cmd_vel
-    /odom
-    " />
-
     <node pkg="husarion_ros" type="serial_bridge.sh" name="odometry_serial_bridge"/>
     <node pkg="rplidar_ros" type="rplidarNode" name="rplidar">
         <param name="angle_compensate" type="bool" value="true"/>
@@ -19,5 +14,5 @@
         <param name="distance_m" type="double" value="1.0" />
     </node>
 
-    <node pkg="rosbag" type="record" name="rosbag_recording_node" args="-o $(find cs169-julienb-pa1)/output.bag $(arg bag_topics)" />
+
 </launch>

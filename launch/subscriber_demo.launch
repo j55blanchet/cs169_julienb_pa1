@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="husarion_ros" type="serial_bridge.sh" name="odometry_serial_bridge"/>
+
+    <node  pkg="cs169_julienb_pa1" type="odom_subscriber.py" name="subscriber_demo"  output="screen"/>
+
+    <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="keyboard_control" output="screen"/>
+</launch>ll
