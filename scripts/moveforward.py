@@ -13,7 +13,7 @@ import rospy
 from geometry_msgs.msg import Twist
 
 MAX_SPEED = 0.2 # Max speed to instruct the robot to go, in m/s
-rate_hz = 1     # Rate at which to publish velocity commands (and to print to console)
+RATE_HZ = 1     # Rate at which to publish velocity commands (and to print to console)
 
 def main():
     rospy.init_node("moveforward")
@@ -22,7 +22,7 @@ def main():
     # Distance is specified as a parameter (in meters)
     distance = rospy.get_param("distance_m", default=1.0)
     distance_remaining = distance
-    rate = rospy.Rate(rate_hz)
+    rate = rospy.Rate(RATE_HZ)
 
     rospy.loginfo("Rosbot will move forward {:f} meters".format(distance))
     rospy.loginfo("Sleeping for 5 seconds to allow for serial bridge to get operational")
